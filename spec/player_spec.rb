@@ -4,9 +4,12 @@ describe Player do
 
   subject(:player) {described_class.new}
 
-  it "should have two players, player X and player O" do
-    expect(player.player_x).to be_an_instance_of(:player)
-    expect(player.player_o).to be_an_instance_of(:player)
+  it "should have a name" do
+    expect(player).to respond_to(:name)
+  end
+
+  it "should have a moves" do
+    expect(player.moves).to be_an(Array)
   end
 
 end
