@@ -12,4 +12,5 @@ describe Player do
     expect(player.moves).to be_an(Array)
   end
 
+
 end
