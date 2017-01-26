@@ -7,4 +7,5 @@ def initialize
   @moves = []
 end
 
+
 end
