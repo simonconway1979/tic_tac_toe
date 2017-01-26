@@ -1,4 +1,4 @@
-require_relative 'player'
+require 'player.rb'
 
 describe Player do
 
