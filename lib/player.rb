@@ -1,6 +1,7 @@
 class Player
 
-attr_reader :name, :moves
+attr_reader :moves
+attr_accessor :name
 
 def initialize
   @name

@@ -1,5 +1,3 @@
-require 'config.rb'
-
 class Config
 
   attr_reader :available_moves, :model
