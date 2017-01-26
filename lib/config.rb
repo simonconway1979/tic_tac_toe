@@ -20,6 +20,10 @@ class Config
     @available_moves
   end
 
+  def get_model
+    @model
+  end
+
 
 
 end
