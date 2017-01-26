@@ -16,6 +16,10 @@ class Config
               {diagonal2: [nil, nil, nil]}]
   end
 
+  def get_available_moves
+    @available_moves
+  end
+
 
 
 end
