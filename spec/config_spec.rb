@@ -28,4 +28,15 @@ subject(:config) {described_class.new}
                                                "C1", "C2", "C3"])
   end
 
+  it 'should have a method to get game model' do
+    expect(subject.get_model).to eq([{column_a: [nil, nil, nil]},
+                                               {column_b: [nil, nil, nil]},
+                                               {column_c: [nil, nil, nil]},
+                                               {row_1: [nil, nil, nil]},
+                                               {row_2: [nil, nil, nil]},
+                                               {row_3: [nil, nil, nil]},
+                                               {diagonal1: [nil, nil, nil]},
+                                               {diagonal2: [nil, nil, nil]}])
+  end
+
 end
