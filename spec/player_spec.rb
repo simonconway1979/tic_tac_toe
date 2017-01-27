@@ -2,7 +2,7 @@ require 'player.rb'
 
 describe Player do
 
-  subject(:player) {described_class.new}
+  subject(:player) {described_class.new(name = "Name")}
 
   it "should have a name" do
     expect(player).to respond_to(:name)
