@@ -18,7 +18,8 @@ class Game
 
   def turn_counter(first_turn = @player_o)
     turn_counter = []
-    
+
+     
   end
 
 
