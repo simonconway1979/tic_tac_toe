@@ -8,6 +8,8 @@ class Game
   PLAYER_1_NAME = "o"
   PLAYER_2_NAME = "x"
 
+  attr_reader :player_o, :player_x, :model, :avialable_moves
+
   def initialize
       config = Config.new
       @model = config.get_model
@@ -16,10 +18,9 @@ class Game
       @player_x = Player.new(name = PLAYER_2_NAME)
   end
 
-  def turn_counter(first_turn = @player_o)
-    turn_counter = []
-
-     
+  def turn_counter(first_turn = player_o)
+    turn_counter = [player_o, player_x]
+    turn_counter.reverse if first_turn = player_x
   end
 
 

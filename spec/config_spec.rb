@@ -12,14 +12,14 @@ subject(:config) {described_class.new}
   end
 
   it 'should have the model for the game' do
-    expect(config.model).to eq([{column_a: [nil, nil, nil]},
-                                {column_b: [nil, nil, nil]},
-                                {column_c: [nil, nil, nil]},
-                                {row_1: [nil, nil, nil]},
-                                {row_2: [nil, nil, nil]},
-                                {row_3: [nil, nil, nil]},
-                                {diagonal1: [nil, nil, nil]},
-                                {diagonal2: [nil, nil, nil]}])
+    expect(config.model).to eq({column_0: [nil, nil, nil],
+                                column_1: [nil, nil, nil],
+                                column_2: [nil, nil, nil],
+                                row_0: [nil, nil, nil],
+                                row_1: [nil, nil, nil],
+                                row_2: [nil, nil, nil],
+                                diagonal_0: [nil, nil, nil],
+                                diagonal_1: [nil, nil, nil]})
   end
 
   it 'should have a method to get available moves' do
@@ -29,14 +29,14 @@ subject(:config) {described_class.new}
   end
 
   it 'should have a method to get game model' do
-    expect(subject.get_model).to eq([{column_a: [nil, nil, nil]},
-                                               {column_b: [nil, nil, nil]},
-                                               {column_c: [nil, nil, nil]},
-                                               {row_1: [nil, nil, nil]},
-                                               {row_2: [nil, nil, nil]},
-                                               {row_3: [nil, nil, nil]},
-                                               {diagonal1: [nil, nil, nil]},
-                                               {diagonal2: [nil, nil, nil]}])
+    expect(subject.get_model).to eq({column_0: [nil, nil, nil],
+                                     column_1: [nil, nil, nil],
+                                     column_2: [nil, nil, nil],
+                                     row_0: [nil, nil, nil],
+                                     row_1: [nil, nil, nil],
+                                     row_2: [nil, nil, nil],
+                                     diagonal_0: [nil, nil, nil],
+                                     diagonal_1: [nil, nil, nil]})
   end
 
 end
