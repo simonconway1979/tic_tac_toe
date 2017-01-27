@@ -16,6 +16,9 @@ class Game
       @player_x = Player.new(name = PLAYER_2_NAME)
   end
 
+  def turn_counter(first_turn = @player_o)
+    turn_counter = []
+  end
 
 
 end
