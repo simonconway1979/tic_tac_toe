@@ -16,7 +16,6 @@ describe Game do
   end
 
   it 'should take a turn and update the model according to the move' do
-    binding.pry
     subject.update_model(:A1)
     subject.update_model(:B2)
     subject.update_model(:C3)
@@ -30,6 +29,21 @@ describe Game do
                                  :diagonal_1=>[nil, "X", nil]})
   end
 
+  it 'After changing turns should take a turn and update the model fomr player 0 according to the move' do
+    subject.change_turn
+    subject.update_model(:A1)
+    subject.update_model(:B2)
+    subject.update_model(:C3)
+    expect(subject.model).to eq({:row_0=>["O", nil, nil],
+                                 :row_1=>[nil, "O", nil],
+                                 :row_2=>[nil, nil, "O"],
+                                 :column_0=>["O", nil, nil],
+                                 :column_1=>[nil, "O", nil],
+                                 :column_2=>[nil, nil, "O"],
+                                 :diagonal_0=>["O", "O", "O"],
+                                 :diagonal_1=>[nil, "O", nil]})
+  end
+
   it 'should have a method to return the player name for the current player' do
     expect(game.player).to eq("X")
   end
@@ -39,6 +53,7 @@ describe Game do
     game.change_turn
     expect(game.player).to eq("O")
   end
+
 
 
 
