@@ -16,8 +16,7 @@ describe Game do
   end
 
   it 'should take a turn and update the model accordingly' do
-    m = game.model
-    t = game.translations[0]
+
     binding.pry
   end
 

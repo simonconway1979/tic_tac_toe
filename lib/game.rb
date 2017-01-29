@@ -23,6 +23,9 @@ class Game
   end
 
   def update_model(move)
+    t = translations[0]
+    m = model
+    t[move].each{ |key, value| m[key][t[move][key][:position]] = value[:value] }
   end
 
 
