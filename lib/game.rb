@@ -33,6 +33,10 @@ class Game
     turn_counter[0].name
   end
 
+  def play(move)
+    update_model(move)
+    change_turn
+  end
 
   # def select(turn_counter[0], move = [0,0])
   #   update_model
