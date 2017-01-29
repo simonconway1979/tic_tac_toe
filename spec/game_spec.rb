@@ -15,7 +15,8 @@ describe Game do
     expect(subject.turn_counter).to be_an(Array)
   end
 
-  it 'should take a turn and update the model accordingly' do
+  it 'should take a turn and update the model according to the move' do
+    binding.pry
     subject.update_model(:A1)
     subject.update_model(:B2)
     subject.update_model(:C3)

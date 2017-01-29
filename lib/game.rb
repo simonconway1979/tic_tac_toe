@@ -1,5 +1,6 @@
 require_relative 'config'
 require_relative 'player'
+require 'pry'
 
 class Game
 
@@ -23,9 +24,9 @@ class Game
   end
 
   def update_model(move)
-    t = translations[0]
     m = model
-    t[move].each{ |key, value| m[key][t[move][key][:position]] = value[:value] }
+    t = translations
+    t[move].each{ |key, value| m[key][t[move][key][:position]] = player }
   end
 
   def player

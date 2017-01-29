@@ -1,6 +1,6 @@
 class Config
 
-  attr_reader :available_moves, :model
+  attr_reader :available_moves, :model, :player
 
   def initialize
     @available_moves = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
@@ -14,7 +14,7 @@ class Config
               diagonal_0: [nil, nil, nil],
               diagonal_1: [nil, nil, nil]}
 
-    @translations = [A1: {row_0: {position: 0, value: "X"},
+    @translations = {A1: {row_0: {position: 0, value: "X"},
                           column_0: {position: 0, value: "X"},
                           diagonal_0: {position: 0, value: "X"}},
                      A2: {row_0: {position: 1, value: "X"},
@@ -38,7 +38,7 @@ class Config
                      C3: {row_2: {position: 2, value: "X"},
                           column_2: {position: 2, value: "X"},
                           diagonal_0: {position: 2, value: "X"}}
-                    ]
+                    }
   end
 
   def get_available_moves
