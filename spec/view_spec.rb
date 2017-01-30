@@ -1,17 +1,15 @@
 require 'view'
+require 'pry'
 
 describe View do
 
-  it 'should have a method to show the starting state of the board' do
-    expect(view.show).to eq"   |   |
-                            -----------
-                               |   |
-                            -----------
-                               |   |   "       
-  end
-
-
-
-
+  # subject(:view) {described_class.new}
+  #
+  # # let(:model) {double :model, ([[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]])}
+  #
+  #
+  # it 'should have an update_model method to collect the current model for viewing from Game' do
+  #   expect(subject.update_model(model)).to eq([[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]])
+  # end
 
 end

@@ -53,6 +53,11 @@ describe Game do
       expect(subject.player).to eq("X")
     end
 
+    it 'should have a method to check if the current move is valid' do
+      expect(subject.check_move(:A1)).to eq([:A2, :A3, :B1, :B2, :B3, :C1, :C2, :C3])
+      expect{subject.check_move("not_allowed")}.to raise_error("This is not a valid move. Please pick a cell value such as :A1, :B2, :C3 etc.")
+    end
+
     it 'should have a method to change player turn' do
       expect(subject.player).to eq("X")
       subject.change_turn
@@ -71,6 +76,17 @@ describe Game do
                                    :column_2=>[nil, nil, "X"],
                                    :diagonal_0=>["X", "O", "X"],
                                    :diagonal_1=>[nil, "O", nil]})
+    end
+  end
+
+  context 'Viewing the board' do
+    it 'should have a view method to present the board' do
+      expect(game.view).to eq"       1     2     3  /n
+                                 /n A        |     |     /n
+                                      -----------------/n
+                                  B        |     |     /n
+                                      -----------------/n
+                                  C        |     |      \n\n\n"
     end
   end
 end

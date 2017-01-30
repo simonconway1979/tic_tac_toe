@@ -1,10 +1,13 @@
 require_relative 'config'
 require_relative 'player'
+require_relative 'view'
 require 'pry'
 
 class Game
 
-  attr_reader :player_1, :player_2, :model, :available_moves, :translations, :turn_counter
+  attr_reader :player_1, :player_2, :model,
+              :available_moves, :translations, :turn_counter,
+              :view
 
   PLAYER_1_NAME = "X"
   PLAYER_2_NAME = "O"
@@ -33,17 +36,29 @@ class Game
     turn_counter[0].name
   end
 
-  def play(move)
-    update_model(move)
-    change_turn
+  def check_move(move)
+    move = :A1
+    if @available_moves.include? move
+      @available_moves -= [move]
+    else
+      raise("This is not a valid move. Please pick a cell value such as :A1, :B2, :C3 etc.")
+    end
   end
 
-  # def select(turn_counter[0], move = [0,0])
-  #   update_model
-  # end
+  def play(move)
+    check_move(move)
+    update_model(move)
+    change_turn
+    view
+  end
 
-
-
+  def view
+    view = View.new
+    model = @model
+    view.update_model(model)
+    view.format
+    view.show
+  end
 
 
 end

@@ -3,7 +3,7 @@ class Config
   attr_reader :available_moves, :model, :player
 
   def initialize
-    @available_moves = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
+    @available_moves = [:A1, :A2, :A3, :B1, :B2, :B3, :C1, :C2, :C3]
 
     @model = {row_0: [nil, nil, nil],
               row_1: [nil, nil, nil],
@@ -30,9 +30,9 @@ class Config
                           diagonal_1: {position: 1}},
                      B3: {row_1: {position: 2},
                           column_2: {position: 1}},
-                     C1: {row_2: {position: 1},
+                     C1: {row_2: {position: 0},
                           column_0: {position: 2},
-                          diagonal_1: {position: 1}},
+                          diagonal_1: {position: 0}},
                      C2: {row_2: {position: 1},
                           column_1: {position: 2}},
                      C3: {row_2: {position: 2},

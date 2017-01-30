@@ -6,9 +6,9 @@ describe Config do
 subject(:config) {described_class.new}
 
   it 'should have the available moves for the game' do
-    expect(config.available_moves).to eq(["A1", "A2", "A3",
-                                          "B1", "B2", "B3",
-                                          "C1", "C2", "C3"])
+    expect(config.available_moves).to eq([:A1, :A2, :A3,
+                                          :B1, :B2, :B3,
+                                          :C1, :C2, :C3])
   end
 
   it 'should have the model for the game' do
@@ -23,9 +23,9 @@ subject(:config) {described_class.new}
   end
 
   it 'should have a method to get available moves' do
-    expect(subject.get_available_moves).to eq(["A1", "A2", "A3",
-                                               "B1", "B2", "B3",
-                                               "C1", "C2", "C3"])
+    expect(subject.get_available_moves).to eq([:A1, :A2, :A3,
+                                               :B1, :B2, :B3,
+                                               :C1, :C2, :C3])
   end
 
   it 'should have a method to get game model' do
