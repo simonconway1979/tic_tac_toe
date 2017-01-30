@@ -77,6 +77,17 @@ describe Game do
                                    :diagonal_0=>["X", "O", "X"],
                                    :diagonal_1=>[nil, "O", nil]})
     end
+
+    it 'should have a method to check whether either player has won' do
+      expect(game.check_win).to eq(false)
+      game.play(:A1)
+      game.play(:B1)
+      game.play(:A2)
+      game.play(:B2)
+      game.play(:A3)
+      expect.(game.check_win).to eq(true)
+    end
+
   end
 
   context 'Viewing the board' do

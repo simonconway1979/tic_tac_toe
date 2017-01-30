@@ -37,12 +37,15 @@ class Game
   end
 
   def check_move(move)
-    move = :A1
     if @available_moves.include? move
       @available_moves -= [move]
     else
       raise("This is not a valid move. Please pick a cell value such as :A1, :B2, :C3 etc.")
     end
+  end
+
+  def check_win
+    
   end
 
   def play(move)
